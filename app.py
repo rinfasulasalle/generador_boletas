@@ -4,12 +4,12 @@ import os
 os.environ["INVOICE_LANG"] = "es"
 # Datos de factura
 client = Client('John Doe')
-provider = Provider('ABC Inc')
+provider = Provider('ABC Inc',logo_filename = 'imgs/logo.png')
 creator = Creator('John Doe2')
 
 invoice = Invoice(client, provider, creator)
 invoice.currency = 'S/'
-invoice.logo_filename = 'imgs/logo.png'
+
 
 # Ítems
 invoice.add_item(Item(10, 2, description="Eggs"))
